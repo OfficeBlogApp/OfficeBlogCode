@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+
+  <strong>Surname:</strong>
+  <%= @author.surname %>
+
+  <strong>Taskid:</strong>
+  <%= @author.taskID %>
+
+  <strong>Picture:</strong>
+  <%= @author.picture %>
+
+
+<p>
+  <strong>Articles:</strong>
+  <% @author.articles.each do |article| %>
+    <p> 
+      <%= article.article_header %>
+   
+    
+      <%= article.article_name %>
+    
+      <%= article.article_picture %>
+
+    </p>
+  <% end %>
+</p>
+<p>
+<%= link_to 'Article_show', author_makaleler_path(@author) %>
+</p>
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
