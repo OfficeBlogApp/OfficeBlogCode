@@ -1,0 +1,2 @@
+module AdminAuthorsHelper
+end

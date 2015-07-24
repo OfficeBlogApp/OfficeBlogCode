@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  resources :admin_articles
+  resources :admin_authors
+  resources :admin_tasks
   resources :tasks
   resources :articles
   resources :authors do 
     get 'articles'
+
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
