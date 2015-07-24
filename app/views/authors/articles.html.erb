@@ -1,0 +1,12 @@
+<% unless @author.articles.empty? %>
+	<% @author.articles.each do |article|%>
+		<P><%= article.article_header %></P>
+	<P><%= article.article_name %></P>
+		<P><%= article.article_picture %></P>
+	
+	
+
+	<% end%>
+<% else %>
+yok
+<% end %>

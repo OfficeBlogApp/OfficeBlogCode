@@ -12,7 +12,7 @@ class AuthorsController < ApplicationController
   def show
   end
 
-  def makeleler
+  def articles
     @author = Author.find(params[:author_id])
   end
 

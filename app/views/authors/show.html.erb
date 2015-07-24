@@ -17,19 +17,23 @@
 <p>
   <strong>Articles:</strong>
   <% @author.articles.each do |article| %>
-    <p> 
+  
       <%= article.article_header %>
-   
-    
-      <%= article.article_name %>
-    
+  </p> 
+    <p>
+      <%= article.article_name.truncate(5) %>
+
+<%= link_to 'Show_all', author_articles_path(@author) %>
+
+    </p>
+    <p>
       <%= article.article_picture %>
 
     </p>
   <% end %>
 </p>
 <p>
-<%= link_to 'Article_show', author_makaleler_path(@author) %>
+<%= link_to 'Article_show', author_articles_path(@author) %>
 </p>
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
